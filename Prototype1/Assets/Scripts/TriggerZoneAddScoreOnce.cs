@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * John Nguyen
+ * Assignment 2 - Prototype 1
+ * Adds trigger zones for the player to drive into to increment their score, specifically only once
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

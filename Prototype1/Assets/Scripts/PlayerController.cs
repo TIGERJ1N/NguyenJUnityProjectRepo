@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * John Nguyen
+ * Assignment 2 - Prototype 1
+ * Allows the game to take player input (WASD) and translate it into movement for the player's vehicle
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

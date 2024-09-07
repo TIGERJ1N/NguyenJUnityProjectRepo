@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+ * John Nguyen
+ * Assignment 2 - Prototype 1
+ * The score management system the game will use to track the player's score. So long as the game is not over, the game will continue to track score
+ * until they hit at least 3 score points, at which point the game will end
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

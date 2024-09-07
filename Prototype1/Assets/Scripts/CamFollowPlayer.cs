@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * John Nguyen
+ * Assignment 2 - Prototype 1
+ * Allows the camera to follow the player object at a set distance and position behind the player model
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
