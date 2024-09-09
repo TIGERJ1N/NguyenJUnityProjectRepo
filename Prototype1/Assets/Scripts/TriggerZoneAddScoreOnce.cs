@@ -1,5 +1,6 @@
 ﻿/*
  * John Nguyen
+ * TriggerZoneAddScoreOnce.cs
  * Assignment 2 - Prototype 1
  * Adds trigger zones for the player to drive into to increment their score, specifically only once
  */

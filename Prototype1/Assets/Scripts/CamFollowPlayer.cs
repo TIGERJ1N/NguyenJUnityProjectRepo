@@ -1,5 +1,6 @@
 ﻿/*
  * John Nguyen
+ * CamFollowPlayer.cs
  * Assignment 2 - Prototype 1
  * Allows the camera to follow the player object at a set distance and position behind the player model
  */

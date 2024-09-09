@@ -1,5 +1,6 @@
 ﻿/*
  * John Nguyen
+ * PlayerController.cs
  * Assignment 2 - Prototype 1
  * Allows the game to take player input (WASD) and translate it into movement for the player's vehicle
  */
