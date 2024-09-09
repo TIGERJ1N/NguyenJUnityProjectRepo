@@ -1,5 +1,6 @@
 ﻿/*
  * John Nguyen
+ * PlayerControllerX.cs
  * Assignment 2 - Challenge 1
  * Description of Code: Pre-written code for Challenge 1. Takes input from player, W or S, and rotates the plane upward and downward.
  *                      Has a few edits: Vector3.forward, and Time.deltaTime were changed/added.

@@ -1,5 +1,6 @@
 ﻿/*
  * John Nguyen
+ * LoseOnOutOfBounds.cs
  * Assignment 2 - Challenge 1
  * Description of Code: Checks to see if the player has gone out of bounds, then causes the game to be over in ScoreManager.cs.
  */

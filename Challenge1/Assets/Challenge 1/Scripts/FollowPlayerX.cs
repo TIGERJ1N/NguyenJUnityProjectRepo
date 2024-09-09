@@ -1,5 +1,6 @@
 ﻿/*
  * John Nguyen
+ * FollowPlayerX.cs
  * Assignment 2 - Challenge 1
  * Description of Code: Positions the camera to the side of the plane.
  */

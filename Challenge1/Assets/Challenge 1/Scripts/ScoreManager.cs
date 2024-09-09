@@ -1,5 +1,6 @@
 ﻿/*
  * John Nguyen
+ * ScoreManager.cs
  * Assignment 2 - Challenge 1
  * Description of Code: Manages the game over state, the win state, and the score, as well as outputs the correct win/loss text depending on
  *                      the aforementioned conditions.

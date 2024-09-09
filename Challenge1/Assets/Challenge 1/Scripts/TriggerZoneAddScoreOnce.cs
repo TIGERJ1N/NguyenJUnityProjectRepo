@@ -1,5 +1,6 @@
 ﻿/*
  * John Nguyen
+ * TriggerZoneAddScoreOnce.cs
  * Assignment 2 - Challenge 1
  * Description of Code: The replacement script for PlayerEnterTrigger.cs. If the object that a trigger zone collides with is a player,
  *                      consider that trigger zone as triggered and increment the score by 1.
