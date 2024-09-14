@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - DisplayScoreText
+  - HealthSystem
   layers:
   - Default
   - TransparentFX

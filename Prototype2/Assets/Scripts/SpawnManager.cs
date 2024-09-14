@@ -12,6 +12,8 @@ public class SpawnManager : MonoBehaviour
     private float rightBound = 14;
     private float spawnPosZ = 20;
 
+    public HealthSystem healthSystem;
+
     // Update is called once per frame
     void Update()
     {
@@ -48,6 +50,9 @@ public class SpawnManager : MonoBehaviour
     // Step 5: add void Start() method so that the program continually spawns new animals
     private void Start()
     {
+        // Get a reference to the health system script
+        healthSystem = GameObject.FindGameObjectWithTag("HealthSystem").GetComponent<HealthSystem>(); ;
+
         // Step 5: InvokeRepeating() calls the method repeatedly: ("methodName", startDelay, spawnInterval);
         // InvokeRepeating("SpawnRandomPrefab", 2, 1.5f);
 
@@ -62,7 +67,7 @@ public class SpawnManager : MonoBehaviour
         // Add a three second delay before first spawning the prefabs
         yield return new WaitForSeconds(3f);
 
-        while (true)
+        while (!healthSystem.gameOver)
         {
             // Instead of copy-pasting, call the encapsulated method that was already written
             SpawnRandomPrefab();
