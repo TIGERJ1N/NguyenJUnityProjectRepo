@@ -1,4 +1,14 @@
-﻿//This script is based on https://www.youtube.com/watch?v=3uyolYVsiWc
+﻿/*
+    * John Nguyen
+    * HealthSystem.cs
+    * Assignment 3 - Prototype2
+    * This is the health system script, which is pre-written to provide a health system UI with it's functions (updating hearts as animals run past, setting the game to game over when health is <= 0)
+    * This script also allows the player to restart the game when the game is over.
+    *   There is also a leftover AddMaxHealth() function that can be used to increase the amount of total hearts the player has,
+    *   however it goes unused in this Prototype.
+*/
+
+//This script is based on https://www.youtube.com/watch?v=3uyolYVsiWc
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*
+    * John Nguyen
+    * SpawnManager.cs
+    * Assignment 3 - Prototype2
+    * This is the spawn manager, which randomly decides between 1.5 to 3.0 seconds when to spawn a new animal from the top of the screen so long as the game is not "over"
+    *                                                           ^^ (float randomDelay = Random.Range(1.5f, 3.0f);)                                              ^^ (while (!healthSystem.gameOver))
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -47,7 +55,7 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
-    // Step 5: add void Start() method so that the program continually spawns new animals
+    // Step 5: add void Start() method so that the program continually spawns new animals ... First, the script must find the HealthSystem so that it is initialized
     private void Start()
     {
         // Get a reference to the health system script

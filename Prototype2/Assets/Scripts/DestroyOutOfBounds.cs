@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+    * John Nguyen
+    * DestroyOutOfBounds.cs
+    * Assignment 3 - Prototype2
+    * This is the destroy out of bounds script, which manages how the food projectiles and animals are deleted. When either exit their respective boundaries, the script deletes those objects
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

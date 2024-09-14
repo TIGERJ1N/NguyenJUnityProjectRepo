@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+    * John Nguyen
+    * ShootPrefab.cs
+    * Assignment 3 - Prototype2
+    * This is the shoot prefab script, which allows the player to shoot a food prefab from their player model when the Spacebar is pressed down
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

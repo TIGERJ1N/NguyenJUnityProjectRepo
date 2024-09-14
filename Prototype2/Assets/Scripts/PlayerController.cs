@@ -1,7 +1,13 @@
-﻿using System.Collections;
+﻿/*
+    * John Nguyen
+    * PlayerController.cs
+    * Assignment 3 - Prototype2
+    * This is the player controller script so that the player can move their player model at the bottom of the screen
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class PlayerController : MonoBehaviour
 {
     public float horizontalInput; // get's horizontal input
