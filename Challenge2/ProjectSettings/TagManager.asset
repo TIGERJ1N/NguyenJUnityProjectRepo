@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Dog
   - SpawnManager
+  - DisplayScoreText
+  - HealthSystem
   layers:
   - Default
   - TransparentFX
