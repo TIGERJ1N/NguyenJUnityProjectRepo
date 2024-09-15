@@ -83,7 +83,7 @@ public class SpawnManager : MonoBehaviour
             // Creates a randomized delay so that animals spawn with random timings
             float randomDelay = Random.Range(1.5f, 3.0f);
 
-            // Wait for a random amount of seconds (0.8s to 2.0s) before continuing the while loop (wait some seconds to spawn another prefab)
+            // Wait for a random amount of seconds (1.5f, 3.0f) before continuing the while loop (wait some seconds to spawn another prefab)
             yield return new WaitForSeconds(randomDelay);
         }
     }
