@@ -210,6 +210,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2112cb7235d5b74286725088a8b35c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
+  scoreText: {fileID: 0}
+  playerControllerScript: {fileID: 1148444864}
+  won: 0
 --- !u!4 &411632803
 Transform:
   m_ObjectHideFlags: 0
@@ -485,7 +489,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 'Score:'
 --- !u!222 &722528120
 CanvasRenderer:
   m_ObjectHideFlags: 0
