@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+* John Nguyen
+* SpawnManager.cs
+* Assignment 4 - Prototype 3
+* This is the spawn manager script, which allows the game to spawn obstacles on a delay.
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,7 +25,6 @@ public class SpawnManager : MonoBehaviour
         playerControllerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
 
         InvokeRepeating("SpawnObstacle", startDelay, repeatRate);
-        
     }
 
     void SpawnObstacle()

@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+* John Nguyen
+* MoveLeft.cs
+* Assignment 4 - Prototype 3
+* This is the MoveLeft script, which allows the background and obstacles contained in the game scene to move left past the player's model.
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

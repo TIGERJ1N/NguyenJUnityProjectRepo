@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*
+* John Nguyen
+* TriggerZoneAddScore.cs
+* Assignment 4 - Prototype 3
+* This is the trigger zone script added to obstacles. 
+* When players run into the invisible trigger above an obstacle, it increments the score by one.
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

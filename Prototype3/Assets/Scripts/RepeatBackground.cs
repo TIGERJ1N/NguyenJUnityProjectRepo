@@ -1,4 +1,13 @@
-﻿using System.Collections;
+﻿/*
+* John Nguyen
+* RepeatBackground.cs
+* Assignment 4 - Prototype 3
+* This is the repeat background script, which ensures that the background is able to "repeat" by slicing the pre-made background in two, and
+* repositioning it back to it's original starting point when the middle of it passes the player (creating a "looping" background).
+*/
+
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

@@ -1,4 +1,13 @@
-﻿using System.Collections;
+﻿/*
+* John Nguyen
+* UIManager.cs
+* Assignment 4 - Prototype 3
+* This is the UI manager script, which sets up the Score text in the top left with conditions made to change the text if the player wins the game
+* by achieving 10 points, or lose the game if they run into an obstacle. Also allows the player to restart the game when 'R' is pressed.
+*/
+
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
