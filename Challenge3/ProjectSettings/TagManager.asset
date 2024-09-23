@@ -8,6 +8,8 @@ TagManager:
   - Bomb
   - Background
   - InvisibleBouncyFloor
+  - ScoreText
+  - ScoreManager
   layers:
   - Default
   - TransparentFX

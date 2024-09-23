@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*
+* John Nguyen
+* MoveLeftX.cs
+* Assignment 4 - Challenge 3
+* This is the move left script, pre-provided by the challenge package. Line 27 was changed to ensure that the game kept moving obstacles and
+* the background left so long as the game wasn't over.
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

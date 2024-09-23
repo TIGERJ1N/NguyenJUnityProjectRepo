@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*
+* John Nguyen
+* RepeatBackgroundX.cs
+* Assignment 4 - Challenge 3
+* This is the repeat background script, preprovided by the challenge package. The only thing that was changed was line 20, which dealt with how the
+* background was sliced so that it would repeat as it moved left past the balloon (from .size.y to .size.x).
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

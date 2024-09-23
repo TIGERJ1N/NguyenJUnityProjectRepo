@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*
+* John Nguyen
+* SpawnManagerX.cs
+* Assignment 4 - Challenge 3
+* This is the spawn manager script, pre-provided by the challenge package. Only one change was made on line 24, which used to say "PrawnsObject"
+* in the InvokeRepeating() method, but was changed to "SpawnObjects" to reflect the actual method's name to spawn objects.
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +21,7 @@ public class SpawnManagerX : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnObjects", spawnDelay, spawnInterval); // Fixed: Was "PrawnObject" before, now "SpawnObjects"
+        InvokeRepeating("SpawnObjects", spawnDelay, spawnInterval); // Fixed: Was "PrawnsObject" before, now "SpawnObjects"
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerControllerX>();
     }
 
