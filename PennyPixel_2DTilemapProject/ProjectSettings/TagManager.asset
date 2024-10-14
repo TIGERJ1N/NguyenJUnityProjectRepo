@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Through
+  - ScoreText
+  - CollectableGem
+  - Exit
+  - ScoreManager
   layers:
   - Default
   - TransparentFX
@@ -50,6 +54,9 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Exit
+    uniqueID: 1648604055
     locked: 0
   - name: Plants
     uniqueID: 3251401619

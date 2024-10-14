@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*
+* John Nguyen
+* GemBehaviour.cs
+* Assignment 5A
+* This was imported as part of the PennyPixel_2DTilemapProject.zip file from blackboard.
+* Only one change was added: Reference to scoreManager + incrementing score when the player collects a gem
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,11 +18,13 @@ public class GemBehaviour : MonoBehaviour
 	public CircleCollider2D gemCollider2D;
 
 	private float durationOfCollectedParticleSystem;
+	private ScoreManager scoreManager; // ADDED: Reference to ScoreManager
 
 
 	void Start()
 	{
 		durationOfCollectedParticleSystem = collectedParticleSystem.GetComponent<ParticleSystem>().main.duration;
+		scoreManager = FindObjectOfType<ScoreManager>(); // ADDED: Find the ScoreManager in the scene
 	}
 
 	void OnTriggerEnter2D(Collider2D theCollider)
@@ -29,6 +39,7 @@ public class GemBehaviour : MonoBehaviour
 		gemCollider2D.enabled = false;
 		gemVisuals.SetActive (false);
 		collectedParticleSystem.SetActive (true);
+		scoreManager.IncrementScore(); // ADDED: Call to increment score in ScoreManager
 		Invoke ("DeactivateGemGameObject", durationOfCollectedParticleSystem);
 
 	}

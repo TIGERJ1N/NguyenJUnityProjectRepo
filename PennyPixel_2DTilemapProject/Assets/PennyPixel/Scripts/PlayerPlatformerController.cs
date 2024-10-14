@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*
+* John Nguyen
+* PlayerPlatformerController.cs
+* Assignment 5A
+* This is the player platformer controller, imported alongside the PennyPixel_2DTilemapProject assets.
+* The only thing that was changed here was to add a float for the y velocity (for animations).
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -49,7 +57,7 @@ public class PlayerPlatformerController : PhysicsObject {
 
         animator.SetBool ("grounded", grounded);
         animator.SetFloat ("velocityX", Mathf.Abs (velocity.x) / maxSpeed);
-        animator.SetFloat("velocityY", velocity.y);
+        animator.SetFloat("velocityY", velocity.y); // ADDED THROUGH FOLLOW ALONG
 
         targetVelocity = move * maxSpeed;
     }
