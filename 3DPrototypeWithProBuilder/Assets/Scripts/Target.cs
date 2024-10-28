@@ -3,6 +3,7 @@
 * Target.cs
 * Assignment 5B - 3D Prototype with ProBuilder
 * This is the Target script. It manages any given enemy's health value so that, when it hits 0, the object this script is attached to "dies"/is destroyed.
+* Slight edit here to link it to the ScoreManager script (increment targetsHit by 1 for each target destroyed).
 */
 
 using System.Collections;
@@ -24,6 +25,7 @@ public class Target : MonoBehaviour
 
     void Die()
     {
+        ScoreManager.targetsHit++;
         Destroy(gameObject);
     }
 }

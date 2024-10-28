@@ -8,7 +8,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class ShootWithRaycasts : MonoBehaviour
 {
     public float damage = 10f;
@@ -25,7 +24,6 @@ public class ShootWithRaycasts : MonoBehaviour
             Shoot();
         }
     }
-
     void Shoot()
     {
         // At the beginning of the Shoot() method, play the particle effect
