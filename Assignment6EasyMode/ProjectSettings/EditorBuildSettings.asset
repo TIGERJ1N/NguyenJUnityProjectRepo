@@ -9,15 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 207f11797361a0b488a6f620514cbd1a
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
-    guid: edc2c73d219529949aad82666212b27f
+    path: Assets/Scenes/AcademyLevel.unity
+    guid: 3c82674dd93e75a49bf6c210db383637
   - enabled: 1
-    path: Assets/Scenes/Level2.unity
-    guid: c2ae0aeca976a3449aa95bc3713ba3c7
-  - enabled: 1
-    path: Assets/Scenes/Level3.unity
-    guid: 260444010c79cbc4c995ce4176579ede
-  - enabled: 1
-    path: Assets/PolygonStarter/Scenes/Demo.unity
-    guid: 5215016c20f88ea498985ac3e0ab4f9d
+    path: Assets/Scenes/FieldLevel.unity
+    guid: a0226f47a7a9cfd4a979582f3b8cfe0f
   m_configObjects: {}
