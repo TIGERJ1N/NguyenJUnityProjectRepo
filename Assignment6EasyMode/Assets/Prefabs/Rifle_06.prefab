@@ -5661,3 +5661,4 @@ MonoBehaviour:
   cam: {fileID: 0}
   muzzleFlash: {fileID: 5015422030771818774}
   hitForce: 10
+  shotCooldown: 0.5

@@ -42,6 +42,11 @@ public class YouWinTriggerZone : MonoBehaviour
         {
             ScoreManager.displayWinMessage = false; // Reset flag on restart
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+
+            // Reset cursor state
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 }

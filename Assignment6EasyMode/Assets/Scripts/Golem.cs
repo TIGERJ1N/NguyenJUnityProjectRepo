@@ -1,3 +1,10 @@
+/*
+* John Nguyen
+* Golem.cs
+* Assignment 5B - 3D Prototype with ProBuilder
+* From Follow Along video. Unchanged.
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,7 +31,7 @@ public class Golem : Enemy
         
     }
 
-    public override void TakeDamage(int amount)
+    public override void TakeDamage(float amount)
     {
         Debug.Log("You took " + amount + " points of damage!");
     }

@@ -10,7 +10,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Target : MonoBehaviour
+public class Target : MonoBehaviour, IDamageable
 {
     public float health = 30f; // Originally 50f, but now 30f to avoid repetitive stress injury on fingers
 
@@ -23,7 +23,17 @@ public class Target : MonoBehaviour
         }
     }
 
-    void Die()
+    public virtual bool IsHit()
+    {
+        return health > 0;
+    }
+
+    public virtual void OnHit()
+    {
+        Debug.Log($"{gameObject.name} was hit! Current health: {health}");
+    }
+
+    protected virtual void Die() // Made virtual to allow overriding in subclasses
     {
         ScoreManager.targetsHit++;
         Destroy(gameObject);

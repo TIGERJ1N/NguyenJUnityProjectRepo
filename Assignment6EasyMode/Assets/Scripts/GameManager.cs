@@ -1,3 +1,12 @@
+/*
+* John Nguyen
+* GameManager.cs
+* Assignment 5B - 3D Prototype with ProBuilder
+* This script manages the main menu and pause menu, as well as how the player interacts with both.
+* Additions in this script include fixes for interactions between the player's cursor and the pause menu when P is pressed.
+*   (Issue from before was that if the player press P, the player couldn't actually interact with any of the Pause Menu buttons.)
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,6 +31,10 @@ public class GameManager : Singleton<GameManager>
             playerInput = player.GetComponent<StarterAssets.StarterAssetsInputs>();
             firstPersonController = player.GetComponent<StarterAssets.FirstPersonController>();
         }
+
+        // Reset cursor state on start
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     /*#region This code makes this class a Singleton
@@ -84,7 +97,7 @@ public class GameManager : Singleton<GameManager>
         pauseMenu.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        playerInput.enabled = false;
+        //playerInput.enabled = false;
     }
 
     public void Unpause()
@@ -93,7 +106,7 @@ public class GameManager : Singleton<GameManager>
         pauseMenu.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        playerInput.enabled = true;
+        //playerInput.enabled = true;
     }
 
     private void Update()

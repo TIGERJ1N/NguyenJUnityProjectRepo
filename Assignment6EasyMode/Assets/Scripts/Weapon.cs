@@ -1,3 +1,10 @@
+/*
+* John Nguyen
+* Weapon.cs
+* Assignment 5B - 3D Prototype with ProBuilder
+* From Follow Along Video. Unchanged.
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

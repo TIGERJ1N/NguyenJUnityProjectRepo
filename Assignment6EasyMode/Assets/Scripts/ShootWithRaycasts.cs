@@ -15,11 +15,13 @@ public class ShootWithRaycasts : MonoBehaviour
     public Camera cam;
     public ParticleSystem muzzleFlash;
     public float hitForce = 10f;
+    public float shotCooldown = 1f;
+    private bool canShoot = true;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && canShoot)
         {
             Shoot();
         }
@@ -35,21 +37,31 @@ public class ShootWithRaycasts : MonoBehaviour
         {
             Debug.Log(hitInfo.transform.gameObject.name);
 
-            // Get the Target script off the hit object
-            Target target = hitInfo.transform.gameObject.GetComponent<Target>();
-            
-            // If a taget script was found, make the target take damage
-            if(target != null)
+            // Get the IDamageable interface from the hit object
+            IDamageable damageable = hitInfo.transform.gameObject.GetComponent<IDamageable>();
+
+            // If a target script was found, make the target take damage
+            if (damageable != null)
             {
-                target.TakeDamage(damage);
+                damageable.TakeDamage(damage);
 
                 // If the shot hits a Rigidbody, apply a force
                 if(hitInfo.rigidbody != null)
                 {
                     hitInfo.rigidbody.AddForce(cam.transform.TransformDirection(Vector3.forward) * hitForce, ForceMode.Impulse);
                 }
-
+            }
+            else
+            {
+                StartCoroutine(HandleCoolDown());
             }
         }
+    }
+
+    private IEnumerator HandleCoolDown()
+    {
+        canShoot = false;
+        yield return new WaitForSeconds(shotCooldown);
+        canShoot = true;
     }
 }

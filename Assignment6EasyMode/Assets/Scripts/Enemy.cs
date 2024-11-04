@@ -1,3 +1,10 @@
+/*
+* John Nguyen
+* Enemy.cs
+* Assignment 5B - 3D Prototype with ProBuilder
+* From Follow Along video. Largely unchanged, except for IsHit() and OnHit() being added to follow Step 2 requirements
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,17 +30,15 @@ public abstract class Enemy : MonoBehaviour, IDamageable
 
     protected abstract void Attack(int amount);
 
-    public abstract void TakeDamage(int amount);
+    public abstract void TakeDamage(float amount);
 
-    // Start is called before the first frame update
-    void Start()
+    public virtual bool IsHit()
     {
-        
+        return health > 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    public virtual void OnHit()
     {
-        
+        Debug.Log($"{gameObject.name} was hit!");
     }
 }
