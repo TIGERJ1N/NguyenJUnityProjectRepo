@@ -1,6 +1,16 @@
-﻿using System.Collections;
+﻿/*
+* John Nguyen
+* PlayerController.cs
+* Assignment 7 - Prototype 4
+* This is the player controller script that manages the players movement in the game.
+* It also tracks the game over state (based on whether or not the player fell off the platform) and how collisions work with other objects.
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,6 +23,15 @@ public class PlayerController : MonoBehaviour
     public bool hasPowerup;
     private float powerupStrength = 15.0f;
     public GameObject powerupIndicator;
+
+    // Float for fall threshold (failure condition)
+    private float fallThreshold = -10f;
+
+    // Game Over Text, Wave Text references
+    public TextMeshProUGUI gameOverText;
+    public TextMeshProUGUI waveText;
+
+    private bool isGameOver = false; // Track whether the game is over
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +47,17 @@ public class PlayerController : MonoBehaviour
 
         // Move our powerup indicator to the ground below our player
         powerupIndicator.transform.position = transform.position + new Vector3(0, -0.5f, 0);
+
+        if (transform.position.y < fallThreshold)
+        {
+            GameOver("You Lose! Press R to Restart!");
+            waveText.gameObject.SetActive(false);
+        }
+
+        if (isGameOver && Input.GetKeyDown(KeyCode.R))
+        {
+            RestartGame();
+        }
     }
 
     private void FixedUpdate()
@@ -70,5 +100,26 @@ public class PlayerController : MonoBehaviour
             // Add force away from player
             enemyRigidbody.AddForce(awayFromPlayer * powerupStrength, ForceMode.Impulse);
         }
+    }
+
+    // GameOver function to show the player that they've lost by falling off the sides
+    private void GameOver(string message)
+    {
+        isGameOver = true;
+        Debug.Log(message);
+        Time.timeScale = 0; // Pause the game because of the loss
+        DisplayGameOverMessage(message);
+    }
+
+    private void DisplayGameOverMessage(string message)
+    {
+        gameOverText.gameObject.SetActive(true);
+        gameOverText.text = message;
+    }
+
+    void RestartGame()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0); // Reload the scene
     }
 }
