@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+* John Nguyen
+* RotateCameraX.cs
+* Assignment 7 - Challenge 4
+* Unchanged - From follow-along.
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

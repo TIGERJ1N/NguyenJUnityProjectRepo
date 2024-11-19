@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+* John Nguyen
+* EnemyX.cs
+* Assignment 7 - Challenge 4
+* This controls the enemies in the game (soccer balls). Slight changes made following Challenge document.
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +19,7 @@ public class EnemyX : MonoBehaviour
     void Start()
     {
         enemyRb = GetComponent<Rigidbody>();
+        playerGoal = GameObject.FindGameObjectWithTag("PlayerGoal");
     }
 
     // Update is called once per frame
@@ -20,7 +28,6 @@ public class EnemyX : MonoBehaviour
         // Set enemy direction towards player goal and move there
         Vector3 lookDirection = (playerGoal.transform.position - transform.position).normalized;
         enemyRb.AddForce(lookDirection * speed * Time.deltaTime);
-
     }
 
     private void OnCollisionEnter(Collision other)
@@ -32,9 +39,8 @@ public class EnemyX : MonoBehaviour
         } 
         else if (other.gameObject.name == "Player Goal")
         {
+            GameObject.Find("GameManager").GetComponent<GameManager>().EnemyPassedGoal();
             Destroy(gameObject);
         }
-
     }
-
 }
