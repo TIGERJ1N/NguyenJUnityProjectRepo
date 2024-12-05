@@ -1,3 +1,11 @@
+/*
+* John Nguyen
+* ThirdPersonCharacter.cs
+* Assignment 9 - Pathfinding and AI with NavMeshAgent
+* This script is unchanged during the follow-along video.
+* It is used to control the animations/movements for the enemies featured in Finished06.
+*/
+
 using UnityEngine;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
